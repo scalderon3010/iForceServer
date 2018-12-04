@@ -2,11 +2,8 @@ export default `
 
   type Exercise {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
-    status: String!
+    name: String!
+    muscleGroup: String!
   }
 
   type Query {
@@ -15,7 +12,16 @@ export default `
   }
 
   type Mutation {
-    createExercise(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): Exercise!
+    createExercise( id: String!, name: String!, muscleGroup: String!): Exercise!
   }
 
 `;
+
+/*
+
+Exercice
+-> id
+-> name
+-> muscleGroup
+
+*/

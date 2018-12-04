@@ -4,14 +4,14 @@ export default (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         primaryKey: true,
       },
-      accountId: DataTypes.STRING,
       gymId: DataTypes.STRING,
+      userId: DataTypes.STRING,
     },{
        timestamps: false,
     });
   
    Bill.associate = (models) => {
-    Bill.belongsTo(models.Account, {foreignKey: 'accountId', targetKey: 'id'});
+    Bill.belongsTo(models.User, {foreignKey: 'userId', targetKey: 'id'});
     Bill.belongsTo(models.Gym, {foreignKey: 'gymId', targetKey: 'id'});
   };
   
@@ -23,7 +23,7 @@ export default (sequelize, DataTypes) => {
 
   Bills (Needs to have all the attributes on digital bills (MH))
   -> id
-  -> gym
-  -> client
-  
+  -> gymId
+  -> userId
+
   */

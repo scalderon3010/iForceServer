@@ -12,6 +12,10 @@ export default (sequelize, DataTypes) => {
   
     return Exercise;
 };
+
+Exercise.associate = (models) => {
+  Exercise.hasMany(models.WorkoutProgramExercise, {foreignKey: 'exerciseId',sourceKey: 'id'});
+};
   
 /*
 

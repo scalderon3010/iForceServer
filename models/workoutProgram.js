@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes) => {
-    const WorkOutProgram = sequelize.define('workOutProgram', {
+    const WorkoutProgram = sequelize.define('workoutProgram', {
       id: {
         type: DataTypes.STRING,
         primaryKey: true,
@@ -14,12 +14,13 @@ export default (sequelize, DataTypes) => {
        timestamps: false,
     });
     
-   WorkOutProgram.associate = (models) => {
-    WorkOutProgram.belongsTo(models.CaseFile, {foreignKey: 'caseFileId', targetKey: 'id'});
-    WorkOutProgram.belongsTo(models.Trainer, {foreignKey: 'trainerId', targetKey: 'id'});
+    WorkoutProgram.associate = (models) => {
+      WorkoutProgram.belongsTo(models.CaseFile, {foreignKey: 'caseFileId', targetKey: 'id'});
+      WorkoutProgram.belongsTo(models.Trainer, {foreignKey: 'trainerId', targetKey: 'id'});
+      WorkoutProgram.hasMany(models.WorkoutProgramExercise, {foreignKey: 'workoutProgramId',sourceKey: 'id'});
   };
-  
-    return WorkOutProgram;
+
+    return WorkoutProgram;
   };
   
 

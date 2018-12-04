@@ -14,8 +14,10 @@ export default (sequelize, DataTypes) => {
   
     CaseFile.associate = (models) => {
         CaseFile.belongsTo(models.User, {foreignKey: 'userId', targetKey: 'id'});
+        CaseFile.hasMany(models.InjuriesCaseFile, {foreignKey: 'caseFileId',sourceKey: 'id'});
     };
-  
+
+
     return CaseFile;
 };
   
@@ -24,9 +26,9 @@ export default (sequelize, DataTypes) => {
 
 CaseFile
 -> id (pk)
--> User (fk)
--> Observations
--> Objective
--> InitialBodyMesurements
+-> userId (fk)
+-> observations
+-> objective
+-> initialBodyMesurements
 
 */

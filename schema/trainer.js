@@ -2,11 +2,12 @@ export default `
 
   type Trainer {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
-    status: String!
+    accountId : String!
+    gymId: String!
+    name: String!
+    lastName: String!
+    phoneNumber: String!
+    birthday: String!
   }
 
   type Query {
@@ -15,7 +16,21 @@ export default `
   }
 
   type Mutation {
-    createTrainer(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): Trainer!
+    createTrainer(id: String!, accountId : String!, gymId: String!, name: String!, lastName: String!, phoneNumber: String!, birthday: String!): Trainer!
   }
 
 `;
+
+
+/*
+
+Trainer
+-> id (local enumeration)
+-> accountId (fk)
+-> gymId (fk) 
+-> name
+-> lastName
+-> phoneNumber
+-> birthday
+
+*/

@@ -19,3 +19,15 @@ export default `
   }
 
 `;
+
+/*
+
+Account:
+id (pk)
+username 
+password
+email
+type
+status
+
+*/

@@ -17,9 +17,21 @@ export default `
   }
 
   type Mutation {
-    createGym( id: String!, accountid: String! ,juridicalid: String!, MHKey: String!, name: String!, phoneNumber: String!, location: String!, owner: String!): Gym!
+    createGym(id: String!, accountid: String!, juridicalid: String!, MHKey: String!, name: String!, phoneNumber: String!, location: String!, owner: String!): Gym!
   }
 
 `;
 
+/*
 
+Gym:
+-> id (local enumeration)
+-> accountid (fk)
+-> juridicalid
+-> MHKey
+-> name
+-> phonenumber
+-> location
+-> owner
+
+*/

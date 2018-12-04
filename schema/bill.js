@@ -2,11 +2,8 @@ export default `
 
   type Bill {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
-    status: String!
+    gymId: String!
+    userId: String!
   }
 
   type Query {
@@ -15,7 +12,16 @@ export default `
   }
 
   type Mutation {
-    createBill(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): Bill!
+    createBill(id: String!, gymId: String!, userId: String!): Bill!
   }
 
 `;
+
+  /*
+
+  Bills (Needs to have all the attributes on digital bills (MH))
+  -> id
+  -> gymId
+  -> userId
+  
+  */

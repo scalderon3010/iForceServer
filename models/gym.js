@@ -14,8 +14,10 @@ export default (sequelize, DataTypes) => {
   },{
      timestamps: false,
   });
+
  Gym.associate = (models) => {
   Gym.belongsTo(models.Account, {foreignKey: 'accountid', targetKey: 'id'});
+  Gym.hasMany(models.Trainer, {foreignKey: 'gymId', sourceKey: 'id'});
 };
 
   return Gym;
@@ -25,9 +27,9 @@ export default (sequelize, DataTypes) => {
 
 Gym:
 -> id (local enumeration)
--> account (fk)
--> juridical id
--> MH Key
+-> accountid (fk)
+-> juridicalid
+-> MHKey
 -> name
 -> phonenumber
 -> location

@@ -9,24 +9,24 @@ export default (sequelize, DataTypes) => {
       size: DataTypes.STRING,
       weight: DataTypes.STRING,
       muscleKg: DataTypes.STRING,
-      RightArm: DataTypes.STRING,
-      LeftArm: DataTypes.STRING,
-      Metabolism: DataTypes.STRING,
-      VisceralFat: DataTypes.STRING,
-      Bones: DataTypes.STRING,
-      WaterPercentage: DataTypes.STRING,
-      BloodPressure: DataTypes.STRING,
-      Waist: DataTypes.STRING,
-      Hip: DataTypes.STRING,
-      Chest: DataTypes.STRING,
-      RightBicep: DataTypes.STRING,
-      LeftBicep: DataTypes.STRING,
-      RightQuadricep: DataTypes.STRING,
-      LeftQuadricep: DataTypes.STRING,
-      RightVastus: DataTypes.STRING,
-      LeftVastus: DataTypes.STRING,
-      RightCalf: DataTypes.STRING,
-      LeftCalf: DataTypes.STRING,
+      rightArm: DataTypes.STRING,
+      leftArm: DataTypes.STRING,
+      metabolism: DataTypes.STRING,
+      visceralFat: DataTypes.STRING,
+      bones: DataTypes.STRING,
+      waterPercentage: DataTypes.STRING,
+      bloodPressure: DataTypes.STRING,
+      waist: DataTypes.STRING,
+      hip: DataTypes.STRING,
+      chest: DataTypes.STRING,
+      rightBicep: DataTypes.STRING,
+      leftBicep: DataTypes.STRING,
+      rightQuadricep: DataTypes.STRING,
+      leftQuadricep: DataTypes.STRING,
+      rightVastus: DataTypes.STRING,
+      leftVastus: DataTypes.STRING,
+      rightCalf: DataTypes.STRING,
+      leftCalf: DataTypes.STRING,
     },{
        timestamps: false,
     });
@@ -43,30 +43,31 @@ export default (sequelize, DataTypes) => {
   BodyMesurements
 
 -> id (pk)
--> WorkoutProgram (fk)
+-> workoutProgramId (fk)
 -> date
 -> size
 -> weight
 -> muscleKg
--> RightArm
--> LeftArm
--> RightLeg
--> LeftLeg
--> Ab (Preguntar qué es)
--> Metabolism
--> Visceral Fat
--> Bones
--> Water %
--> Blood Pressure
--> Waist 1/2
--> Hip
--> Chest
--> Right Bicep
--> Left Bicep
--> Right Quadricep 
--> Left Quadricep 
--> Right Vastus 
--> Left Vastus
--> Calf
+-> rightArm
+-> leftArm
+-> rightLeg
+-> leftLeg
+-> ab (Preguntar qué es)
+-> metabolism
+-> visceralFat
+-> bones
+-> waterPercentage
+-> bloodPressure
+-> waist
+-> hip
+-> chest
+-> rightBicep
+-> leftBicep
+-> rightQuadricep 
+-> leftQuadricep 
+-> rightVastus 
+-> leftVastus
+-> rightCalf
+-> leftCalf
 
 */

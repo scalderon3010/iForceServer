@@ -5,7 +5,7 @@ export default (sequelize, DataTypes) => {
         primaryKey: true      
       },
       gymId: DataTypes.STRING,
-      accountId: DataTypes.STRING,
+      userId: DataTypes.STRING,
       paymentType: DataTypes.STRING,
       paymentPeriod: DataTypes.STRING,
       date: DataTypes.STRING,
@@ -14,7 +14,7 @@ export default (sequelize, DataTypes) => {
     });
 
     Agreement.associate = (models) => {
-      Agreement.belongsTo(models.Account, {foreignKey: 'accountId', targetKey: 'id'});
+      Agreement.belongsTo(models.User, {foreignKey: 'userId', targetKey: 'id'});
       Agreement.belongsTo(models.Gym, {foreignKey: 'gymId', targetKey: 'id'});
     };
   
@@ -25,8 +25,8 @@ export default (sequelize, DataTypes) => {
 /*
 Agreement
 -> id (Pk)
--> gym
--> user
+-> gymId
+-> userId
 -> paymentType
 -> paymentPeriod (monthly, trimester, semester, yearly)
 -> date

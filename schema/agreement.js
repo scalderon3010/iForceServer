@@ -2,11 +2,13 @@ export default `
 
   type Agreement {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
+    gymId: String!
+    userId: String!
+    paymentType: String!
+    paymentPeriod: String!
+    date: String!
     status: String!
+    amounts: String!
   }
 
   type Query {
@@ -15,7 +17,19 @@ export default `
   }
 
   type Mutation {
-    createAgreement(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): Agreement!
+    createAgreement(id: String!, gymId: String!, userId: String!, paymentType: String!, paymentPeriod: String!, date: String!, status: String!, amounts: String!): Agreement!
   }
 
 `;
+
+/*
+Agreement
+-> id (Pk)
+-> gymId
+-> userId
+-> paymentType
+-> paymentPeriod (monthly, trimester, semester, yearly)
+-> date
+-> status (ACTIVE, INACTIVE)
+-> amounts
+*/

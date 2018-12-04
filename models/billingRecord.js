@@ -23,10 +23,11 @@ export default (sequelize, DataTypes) => {
 };
 
 
-/**
+/*
+
   BillingRecord (actual)
 -> id (local enumeration) (pk)
--> agreement
+-> agreementId
 -> billId (fk)
 -> paymentDate
 -> expirationDate

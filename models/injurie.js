@@ -12,7 +12,10 @@ export default (sequelize, DataTypes) => {
   
     return Injurie;
 };
-  
+
+Injurie.associate = (models) => {
+  Injurie.hasMany(models.InjurieCaseFile, {foreignKey: 'injurieId',sourceKey: 'id'});
+};
 
 /*
 

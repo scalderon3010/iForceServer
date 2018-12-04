@@ -28,12 +28,11 @@ export default (sequelize, DataTypes) => {
 
 Trainer
 -> id (local enumeration)
--> account (fk)
--> gym (fk)
--> id (registry id) 
+-> accountId (fk)
+-> gymId (fk) 
 -> name
--> lastname
--> phonenumber
+-> lastName
+-> phoneNumber
 -> birthday
 
 */

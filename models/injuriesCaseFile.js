@@ -18,8 +18,9 @@ export default (sequelize, DataTypes) => {
 /*
 
 InjuriesCaseFile
--> caseFile
--> Injurie
+
+-> caseFileId
+-> injurieId
 -> Severity
 
 */

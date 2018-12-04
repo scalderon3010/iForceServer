@@ -1,12 +1,10 @@
 export default `
 
   type WorkoutProgramExercise {
-    id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
-    status: String!
+    workoutProgramId: String!
+    exerciseId: String!
+    sets: String!
+    reps: String!
   }
 
   type Query {
@@ -15,7 +13,8 @@ export default `
   }
 
   type Mutation {
-    createWorkoutProgramExercise(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): WorkoutProgramExercise!
+    createWorkoutProgramExercise( workoutProgramId: String!, exerciseId: String!, sets: String!, reps: String!): WorkoutProgramExercise!
   }
 
 `;
+

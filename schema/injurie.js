@@ -2,11 +2,8 @@ export default `
 
   type Injurie {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
-    status: String!
+    bodyPart: String!
+    description: String!
   }
 
   type Query {
@@ -15,7 +12,17 @@ export default `
   }
 
   type Mutation {
-    createInjurie(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): Injurie!
+    createInjurie(id: String!, bodyPart: String!, description: String!): Injurie!
   }
 
 `;
+
+/*
+
+Injurie
+-> id
+-> bodyPart
+-> description
+
+
+*/

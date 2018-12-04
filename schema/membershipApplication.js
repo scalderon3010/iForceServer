@@ -2,10 +2,10 @@ export default `
 
   type MembershipApplication {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
+    userId: String!
+    gymId: String!
+    applicationDate: String!
+    approvalDate: String!
     status: String!
   }
 
@@ -15,7 +15,20 @@ export default `
   }
 
   type Mutation {
-    createMembershipApplication(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): MembershipApplication!
+    createMembershipApplication(id: String!, userId: String!, gymId: String!, applicationDate: String!, approvalDate: String!, status: String!): MembershipApplication!
   }
 
 `;
+
+/*
+
+MembershipApplication:
+
+-> id
+-> userId
+-> gymId
+-> applicationDate
+-> approvalDate (can be null)
+-> status
+
+*/

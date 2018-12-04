@@ -4,9 +4,8 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       primaryKey: true,
     },
-    accountId: DataTypes.STRING,
+    userId: DataTypes.STRING,
     gymId: DataTypes.STRING,
-    status: DataTypes.STRING,
     applicationDate: DataTypes.STRING,
     approvalDate: DataTypes.STRING,
     status: DataTypes.STRING,
@@ -15,7 +14,7 @@ export default (sequelize, DataTypes) => {
   });
 
  MembershipApplication.associate = (models) => {
-  MembershipApplication.belongsTo(models.Account, {foreignKey: 'accountId', targetKey: 'id'});
+  MembershipApplication.belongsTo(models.User, {foreignKey: 'userId', targetKey: 'id'});
   MembershipApplication.belongsTo(models.Gym, {foreignKey: 'gymId', targetKey: 'id'});
 };
 
@@ -25,11 +24,12 @@ export default (sequelize, DataTypes) => {
 /*
 
 MembershipApplication:
+
 -> id
--> username
--> gym
--> status
+-> userId
+-> gymId
 -> applicationDate
 -> approvalDate (can be null)
+-> status
 
 */

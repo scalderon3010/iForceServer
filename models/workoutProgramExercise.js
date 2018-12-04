@@ -1,10 +1,10 @@
 export default (sequelize, DataTypes) => {
-    const WorkOutProgramExercise = sequelize.define('workOutProgramExercise', {
+    const WorkoutProgramExercise = sequelize.define('WorkoutProgramExercise', {
       id: {
         type: DataTypes.STRING,
         primaryKey: true,
       },
-      workOutProgramId: DataTypes.STRING,
+      workoutProgramId: DataTypes.STRING,
       exerciseId: DataTypes.STRING,
       sets: DataTypes.STRING,
       reps: DataTypes.STRING
@@ -12,12 +12,12 @@ export default (sequelize, DataTypes) => {
        timestamps: false,
     });
     
-   WorkOutProgramExercise.associate = (models) => {
-    WorkOutProgramExercise.belongsTo(models.WorkOutProgram, {foreignKey: ' workOutProgramId', targetKey: 'id'});
-    WorkOutProgramExercise.belongsTo(models.Exercise, {foreignKey: 'exerciseId', targetKey: 'id'});
+   WorkoutProgramExercise.associate = (models) => {
+    WorkoutProgramExercise.belongsTo(models.WorkoutProgram, {foreignKey: ' workoutProgramId', targetKey: 'id'});
+    WorkoutProgramExercise.belongsTo(models.Exercise, {foreignKey: 'exerciseId', targetKey: 'id'});
   };
   
-    return WorkOutProgramExercise;
+    return WorkoutProgramExercise;
   };
   
 

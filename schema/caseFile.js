@@ -2,11 +2,10 @@ export default `
 
   type CaseFile {
     id: String!
-    username: String!
-    password: String!
-    email: String!
-    type: String!
-    status: String!
+    userId: String!
+    observations: String!
+    objective: String!
+    initialBodyMesurements: String!
   }
 
   type Query {
@@ -15,7 +14,18 @@ export default `
   }
 
   type Mutation {
-    createCaseFile(id: String!, username: String!, password: String!, email: String!, type: String!, status: String!): CaseFile!
+    createCaseFile(id: String!, userId: String!, observations: String!, objective: String!, initialBodyMesurements: String!): CaseFile!
   }
 
 `;
+
+/*
+
+CaseFile
+-> id (pk)
+-> userId (fk)
+-> observations
+-> objective
+-> initialBodyMesurements
+
+*/
