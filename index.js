@@ -17,6 +17,8 @@ const schema = makeExecutableSchema({
 });
 
 const app = express();
+const cors = require('cors')
+app.use(cors())
 
 const graphqlEndpoint = '/graphql';
 
@@ -33,6 +35,8 @@ app.use(
     },
   }),
 );
+
+
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: graphqlEndpoint }));
 

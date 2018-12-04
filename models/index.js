@@ -9,10 +9,9 @@ const sequelize = new Sequelize('iForce', 'postgres', 'root', {
 
 const models = {
   User: sequelize.import('./user'),
-  Account: sequelize.import('./account')
-  //Channel: sequelize.import('./channel'),
-  //Message: sequelize.import('./message'),
-  //Team: sequelize.import('./team'),
+  Account: sequelize.import('./account'),
+  Gym: sequelize.import('./gym')
+  
 };
 
 Object.keys(models).forEach((modelName) => {

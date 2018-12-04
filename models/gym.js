@@ -4,12 +4,33 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       primaryKey: true      
     },
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    email: DataTypes.STRING,
-    type: DataTypes.STRING,
-    status: DataTypes.STRING
+    accountid: DataTypes.STRING,
+    juridicalid: DataTypes.STRING,
+    MHKey: DataTypes.STRING,
+    name: DataTypes.STRING,
+    phoneNumber: DataTypes.STRING,
+    location: DataTypes.STRING,
+    owner: DataTypes.STRING
+  },{
+     timestamps: false,
   });
-
-  return Account;
+ Gym.associate = (models) => {
+  Gym.belongsTo(models.Account, {foreignKey: 'accountid', targetKey: 'id'});
 };
+
+  return Gym;
+};
+
+/*
+
+Gym:
+-> id (local enumeration)
+-> account (fk)
+-> juridical id
+-> MH Key
+-> name
+-> phonenumber
+-> location
+-> owner
+
+*/

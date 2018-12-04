@@ -7,17 +7,22 @@
 export default `
 
   type User {
-    username: String!
-    password: String!
+    id: String!
+    accountid: String!
+    gymid: String!
+    name: String!
+    lastName: String!
+    birthday: String!
+    status: String!
   }
 
   type Query {
-    getUser(username: String!): User!
+    getUser(id: String!): User!
     allUsers: [User!]!
   }
 
   type Mutation {
-    createUser(username: String, password: String!): User!
+    createUser(id: String!, accountid: String!, gymid: String!, name: String!, lastName: String!, birthday: String!, status: String!): User!
   }
 
 `;

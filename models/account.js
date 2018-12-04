@@ -9,7 +9,22 @@ export default (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     type: DataTypes.STRING,
     status: DataTypes.STRING
+  },{
+     timestamps: false,
   });
 
+  
   return Account;
 };
+
+/*
+
+Account:
+id (pk)
+username 
+password
+email
+type
+status
+
+*/
